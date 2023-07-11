@@ -21,7 +21,7 @@ func GetChromeScreenShot(site string, quality int) {
 	log.Printf("take a screenshot from site %s", url)
 
 	var options []chromedp.ExecAllocatorOption
-	options = append(options, chromedp.WindowSize(1400, 2000))
+	options = append(options, chromedp.WindowSize(1400, 200000))
 	options = append(options, chromedp.DefaultExecAllocatorOptions[:]...)
 	actx, cancelFunc := chromedp.NewExecAllocator(context.Background(), options...)
 	defer cancelFunc()
